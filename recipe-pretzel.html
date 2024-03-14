@@ -75,6 +75,11 @@
             color: #333;
         }
 
+        /* Added CSS for spacing between sub-bullet points */
+        .ingredient-list ul li ul li {
+            margin-bottom: 10px; /* Adjust this value to control spacing */
+        }
+
         .recipe-intro {
             background-color: #f8f8f8;
             padding: 20px;
@@ -98,9 +103,22 @@
             height: auto;
         }
 
-        .prep-steps, .cooking-time {
+        .cooking-time {
             margin-top: 20px;
+            margin-bottom: 10px; /* Adjust this value to control spacing */
         }
+
+        .prep-steps ul {
+            list-style-type: disc; /* Enables bullet points for clarity, adjust as needed */
+            padding-left: 20px; /* Adjusts indentation of the list */
+            margin-top: 10px; /* Space above the list */
+            margin-bottom: 10px; /* Space below the list */
+        }
+
+        .prep-steps ul li {
+            margin-bottom: 10px; /* Adjusts space between sub-bullet points */
+        }
+
 
         .video {
             margin: 20px 0;
@@ -118,6 +136,10 @@
             color: #888;
             margin-top: 20px;
         }
+
+        .red-text {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -126,15 +148,16 @@
         <!-- Button to return to the cookbook -->
         <a href="cookbook.html" class="return-button"> <-- Return to Cookbook</a>
        
-        <h1 class="recipe-title">Roasted Garlic Summer Stir-fry (RGSS)</h1>
-        <p class="sub-info"> Conceived Saturday, June 24, 2023 - 1:14 PM</p>
+        <h1 class="recipe-title">The Most Dangerous Pretzel Bites</h1>
+        <p class="sub-info"> Conceived Saturday, July 15, 2023 - 11:41 AM
+        </p>
         <p><strong>Amount of food created:</strong> Two meals</p>
         <p><strong>Costs:</strong> $21.08 to make this recipe four times, 
             meaning six meals at a total of around $2.70 per meal. 
             Quik Maths.</p>
 
         <!-- Inserting the image -->
-        <img src="Recipe_rgss.jpg" alt="Image of Roasted Garlic Summer Stir-fry" class="recipe-image">
+        <img src="Recipe_pretzel.jpg" alt="Image of Pretzel" class="recipe-image">
 
 
         <div class="ingredient-list">
@@ -150,141 +173,197 @@
                 <li>1 egg</li>
                 <!-- Add all other ingredients here -->
             </ul>
-            <h2>Lye Bath Ingredients:</h2>
+            <h2>Lye Bath Materials:</h2>
             <ul>
                 <li>
                     1/2 cup of food grade lye
                     <ul>
                         <!-- Sub-bullets for the 1/2 cup of food grade lye -->
-                        <li>I cannot overstate how careful you have to be when 
-                            working with the pure stuff. If it touches your skin 
-                            you will suffer <span style="color: red;"></span>
-                            permanent burns</span>. If it gets in your
-                            eyes, you will go blind. If you ingest it, you will
-                            die. If you get it on your clothes, it will eat
-                            through them. If you get it on your counter, it will
-                            eat through that too. If you get it on your floor,
-                            it will eat through that as well. If you get it on
-                            your dog, it will eat through that. If you get it on
-                            your cat, it will eat through that. If you get it on
-                            your pet rock, it will eat through that. If you get
-                            it on your pet rock's pet rock, it will eat through
-                            that. And if you get it on your pet rock's pet rock's
-                            pet rock... you get the idea. Be careful.
+                        <li><span>I cannot overstate how careful you have to be when 
+                            working with the pure stuff. If it touches your skin</span> <span class="red-text"><span></span> 
+                            you will suffer
+                            permanent burns</span>. <span>If it gets in your
+                            eyes, <span class="red-text"><span></span>you will go blind</span>. If you ingest it, <span class="red-text"><span></span>you will
+                            die</span>. If you get it on your clothes, <span class="red-text"><span></span>it will eat
+                            through them</span>. If you get it on your counter, <span class="red-text"><span></span>it will
+                            eat through that too</span>. If you get it on your floor,
+                            <span class="red-text"><span></span>it will eat through that as well</span>. If you get it on
+                            your dog, <span class="red-text"><span></span>it will eat through your dog</span>. If you get it on
+                            your cat, <span class="red-text"><span></span>it will eat through your cat</span>. If you get it on
+                            your pet rock, <span class="red-text"><span></span>it will eat through that</span>. If you get
+                            it on your pet rock's pet rock, <span class="red-text"><span></span>it will eat through
+                            that</span>. And if you get it on your pet rock's pet rock's
+                            pet rock... you get the idea. <span class="red-text"><span></span>Be careful</span>.
                         </li>
                         <li>However, you can normally get it online pretty 
-                            easily, just check Amazon and don't get scammed. Get 
+                            easily, just check Amazon and don't get scammed. <span class="red-text"><span></span>Get 
                             FOOD GRADE LYE otherwise your pretzel bites may 
                             contain trace amounts of heavy metals</li>
                     </ul>
                 </li>
                 <!-- Now I'd want to put two sub-bullets on this point-->
-                <li>1 cup sugar snap peas</li>
-                <li>1 cup of White Onion</li>
-                <li>1/2 a Roasted Garlic Summer Sausage</li>
-                <li>1 cup of Shredded Carrots</li>
-                <li>1 teaspoon of turmeric</li>
-                <li>1/3 cup of General Tso's Stirfry sauce</li>
-                <li>1 tablespoon olive oil</li>
-
+                <li>10 cups of water</li>
+                <li>Chemistry Goggles</li>
+                <li>Nitrile Safety Gloves (You can get these from college 
+                    science building lab techs if you ask nicely)</li>
                 <!-- Add all other ingredients here -->
             </ul>
         </div>
 
         <div class="recipe-intro">
             <h2>Description:</h2>
-            <p>Roasted Garlic Summer Stir-fry is a creation inspired by the 
-                delicious taste of Roasted Garlic Summer Sausage, which is good 
-                for the soul and all that. If you want to learn more about 
-                Roasted Garlic Summer Sausage, you can watch the video at the 
-                following link: 
-                <a href="https://www.youtube.com/watch?v=2gPUdfL4IWs" 
-                target="_blank">RGSS</a></p>
-            <div class="video">
-                <!-- Replace `src` with the actual link to your video -->
-                <iframe width="560" height="315" 
-                src="https://www.youtube.com/watch?v=2gPUdfL4IWs" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe>
-            </div>
-            <p>Anyways, the recipe is simple, and it involves two main 
-                actions, one is preparing the rice, and the other is mixing and 
-                cooking the Stirfry. These tasks are done in parallel, so the 
-                recipe can be seen as follows:</p>
+            <p>In the original edition of this cookbook, the text here was just 
+                an explitive telling you to be serious about the lye. However,
+                I do want to be slightly more professional here. So, just keep 
+                in mind that these pretzels are delicious, but require a focused
+                mind. Perhaps attempt meditation beforehand, and avoid watching 
+                youtube videos on you phone while making this. It's not worth
+                it.
+            </p>
         </div>
         
 
         <div class="prep-steps">
             <h2>Prep</h2>
-            <p><strong>1.</strong> Get one full cup of rice (as per the measurement cup in the 
-                rice cooker that was in Asher's apartment in late 2023) and 
-                rinse it with a colander before you place it in the rice cooker 
-                that was in Asher's apartment in late 2023. Then, fill it up to 
-                the line with water. If you're using the rice cooker that was in 
-                Asher's apartment in 2023, be sure to place it in a bowl of 
-                water so that it doesn't overflow. That's important. 
-                Start the rice cooker cooking.
+            <p><strong>1.</strong> Preheat the oven to 400 degrees, line a few 
+                baking sheets you have with parchment paper. Once your gloves 
+                have lye on them you want the transfer to be easy! Just a 
+                reminder that we're not messing around
             </p>
             <p>
-                If you don't have the rice cooker that was in Asher's apartment 
-                in 2023, just make a cup of rice
-            </p>
-            <p>
-                <strong>2.</strong> Chop a cup of white onion, and rinse a cup 
-                of sugar snap peas and a cup of carrots. Good job, you're eating 
-                your vegetables. Also chop up half of a roasted garlic summer 
-                sausage. How much is this in volume you ask? I don't care, the 
-                more the better.
+                <strong>2.</strong> Add the yeast (1tbsp/1pkt), the brown sugar 
+                (1tbsp), and 1/4 cup of water. Whisk and let sit for 5 minutes 
+                or until it begins frothing.
             </p>
             <p> 
-                <strong>3.</strong> Prepare the liquids and seasonings used 
-                later. Combine 1/3 a cup of General Tso's sauce, a tablespoon of 
-                turmeric, and a teaspoon of Old Bay.
+                <strong>3.</strong> Add the remaining water(1 1/4 cups), the 
+                flour (5 cups) the salt (3/4 tsp) and really get in there with 
+                your hands and knead it for about ten minutes. If the dough 
+                doesn't form, just add more flour. I'm not a purist on dough, 
+                just on not suffering lye burns
+            </p>
+            <p>
+                <strong>4.</strong> Fun fact, this dough doesn't need to rise. 
+                Bet you're glad you started preheating the oven earlier, eh?
+            </p>
+            <p> 
+                <strong>5.</strong> Transfer the dough to a non-floured work 
+                surface (Another twist!), and divide it into ten equal pieces. 
+                This can be done by eye or by rolling it into a sheet and then 
+                cutting with kitchen shears. 
+            </p>
+            <p>
+                
+                
+                    <strong>6.</strong> 5.Roll the remaining dough into round about 
+                    24 inch logs.
+                    <ul>
+                        <!-- Sub-bullets for the 1/2 cup of food grade lye -->
+                        <li><span>This is where things get interesting, as you 
+                            have many paths before you. No matter what you 
+                            choose, the recipe continues the same way. I'll 
+                            recommend my two favorites.</span>
+                            <!-- now we add one space here-->
+
+                        </li>
+
+                        <li> <strong>Path #1</strong>: Shape the pretzels traditionally, i.e : 
+                            Shape the log into a letter U. Cross the arms 
+                            placing one over the other then twist them around 
+                            each other once. Bring the ends down to the bottom 
+                            of the U and gently press to stick. Place on greased 
+                            parchment lined baking sheets.
+
+                        </li>
+                        <li> <strong>Path #2</strong>: Cut each rope crosswise into eleven (or 
+                            whatever makes sense) pieces, and then roll them 
+                            into nugget esque shapes to make pretzel nuggets. 
+                            Place on greased parchment lined baking sheets.
+                        </li>
+                    </ul>
+                
+
+            </p>
+            <p> 
+                <strong>7.</strong> At this point, I'd usually slap it on a 
+                sandwich with toasted bread and lettuce (because all my recipes 
+                end up as a sandwich, a soup, or a salad) If not, crackers!
             </p>
             <!-- Add all other preparation steps here -->
         </div>
 
         <div class="cooking-time">
-            <h2>Cooking Time!!!</h2>
-            <p><strong>WARNING:</strong> The rice will be done at some point. 
-                I know, very scary. You can let it warm if it's in a rice cooker 
-                that auto warms (such as the rice cooker in Asher's apartment in 
-                late 2023), but if not you have to deal with it.
+            <h2>The Part Where You Can Damage Yourself And Your Belongings Beyond Repair</h2>
+            <p><strong>WARNING:</strong> Hi, it's me again. This is another 
+                quick reminder to be careful. 
             </p>
             <p>
-                <strong>1. </strong> Add a tablespoon of olive oil to the pan, 
-                let it heat, and begin sautéing the vegetables. They normally 
-                take about seven minutes. I've been told not to cook like a 
-                scientist, so just go until you think that they're almost there.
+                <strong>1. </strong> Place a thick towel on a surface with 
+                plenty of room, place a large stainless steel pot well into the 
+                sheet. On one side place your baking sheets that contain the 
+                pretzel dough and then lay down parchment paper equal to the 
+                dimensions of your baking sheets as close as you can to the pot. 
+                Prepare a cup of vinegar nearby in case of emergency. 
             </p>
             <p> 
-                <strong>2. </strong> Next, add the sliced roasted garlic summer 
-                sausage. You should attempt to brown this for about two more 
-                minutes, really watching the vegetables more than the meat. 
-                If you can, press the sausage into the pan to attempt to brown 
-                it more on the edges. 
+                <strong>2. </strong> Add Ten cups of water carefully into the 
+                pot, and prepare an area nearby for any utensils you will use in 
+                this process. Since you're not from the future I'll tell you to 
+                get a pair of silicone tongs and a silicone spatula.
             </p>
             <p>
-                <strong>3. </strong> Now, add the liquid mixture that I like to 
-                call "Asher's Stirfry sauce". It's sort of like Asher's 
-                constant (1240 ev), but it's way cooler. Cook this for a couple 
-                more minutes, and then you can pour out into a mixing bowl. 
-                <p>(Preferably somewhere where you don't delaminate a table.)</p>
+                <strong>3. </strong> Apply your nitrile gloves and goggles. 
+                Check to make sure all of your skin below your neck is 
+                covered</p>
             </p>
             <p>
-                <strong>4. </strong>Pour the rice over the stirfry in the mixing 
-                bowl, and then mix them together with a mixing spoon, possibly 
-                the same one as used to stir in the stirfry.
+                <strong>4. </strong>Grab your <span class="red-text"><span></span>PLASTIC</span> measuring cup and 
+                carefully pour a half cup of lye above the pot. Don't worry if 
+                it's slightly under, less lye is better than <span class="red-text"><span></span>burning yourself
             </p>
             <p> 
-                <strong>5. </strong> Enjoy! This makes about two meals, so feel 
-                free to share with a friend or enjoy leftovers.
+                <strong>5. </strong> <span class="red-text"><span></span>
+                Carefully pour the lye into the pot, potential splashes will 
+                harm you!</span> Use a silicone spatula to sir the lye to 
+                dissolve, it is dissolved when it appears clear.
+            </p>
+            <p> 
+                <strong>6. </strong> Use the 
+                tongs to carefully dip each of the pretzels in the lye, and hold 
+                it under for 30 seconds. Afterwards, hold it slightly above the 
+                bath for fifteen more seconds to let it drip off any excess lye. 
+                <span class="red-text"><span></span>Remember not to put the tongs anywhere but on parchment paper 
+                as this will cause them to damage your surface.</span> Then, transfer 
+                your pretzels to the clean baking sheet covered with greased 
+                parchment paper.
+            </p>
+            <p> 
+                <strong>7. </strong> Once you are done, clear the sink, and 
+                carefully pour the mixture down the drain. You may pour part of 
+                the cup of vinegar down afterwards if you wish, but keep some 
+                around just in case.
+            </p>
+            <p> 
+                <strong>8. </strong> Whisk an egg in a bowl, and use a brush to 
+                apply the egg bath to the pretzels. Then, pour salt or other 
+                desired flavorings over them.
             </p>
             <!-- Add all other cooking steps here -->
         </div>
 
-
+        <div class="cooking-time">
+            <h2>Baking Time!!!</h2>
+            <p>
+                <strong>1. </strong> Bake pretzels in the oven for 10-13 minutes
+            </p>
+            <p> 
+                <strong>2. </strong> Remove from oven, wait 5 minutes before 
+                peeling away from paper
+            </p>
+            <p>
+                <strong>3. </strong> Serve fresh or freeze!
+            </p>
+        </div>
 
     </div>
 
