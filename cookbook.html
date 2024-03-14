@@ -30,16 +30,19 @@
             padding: 20px;
         }
 
+        .recipe-card-link {
+            text-decoration: none; /* Removes the underline from links */
+            color: inherit; /* The link will use the text color of the parent elements */
+            display: block; /* Makes the link behave like a block element, enabling width and height */
+        }
+
         .recipe-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: box-shadow 0.3s ease-in-out;
+            /* Your existing styles for the recipe card */
         }
 
         .recipe-card:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Example hover effect */
+            transition: box-shadow 0.3s ease-in-out;
         }
 
         .recipe-image {
@@ -83,32 +86,21 @@
 
     <div class="recipe-grid">
         <!-- Recipe 1 -->
-        <div class="recipe-card">
-            <img class="recipe-image" src="recipe1.jpg" alt="Delicious Recipe 1">
-            <div class="recipe-content">
-                <h3 class="recipe-title">Recipe Title 1</h3>
-                <p class="recipe-description">
-                    A short description of Recipe 1, the ingredients, and why it's special.
-                </p>
+        <a href="recipe-rgss.html" class="recipe-card-link">
+            <div class="recipe-card">
+                <img class="recipe-image" src="Recipe_rgss.jpg" alt="Roasted Garlic Summer Stir-fry">
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Roasted Garlic Summer Stir-fry</h3>
+                    <p class="recipe-description">
+                        Ah, Roasted Garlic Summer Stir-fry. One of many dishes 
+                        inspired by Brian David Gilbert.
+                    </p>
+                </div>
             </div>
-        </div>
-        
-        <!-- Repeat for as many recipes as you have -->
-        
-        <!-- Recipe 2 -->
-        <div class="recipe-card">
-            <img class="recipe-image" src="recipe2.jpg" alt="Delicious Recipe 2">
-            <div class="recipe-content">
-                <h3 class="recipe-title">Recipe Title 2</h3>
-                <p class="recipe-description">
-                    A short description of Recipe 2, the ingredients, and its unique taste.
-                </p>
-            </div>
-        </div>
-
-        <!-- Add more recipes as needed -->
-
+        </a>
+        <!-- Additional recipes... -->
     </div>
+    
 
     <!-- Footer or additional content -->
 
