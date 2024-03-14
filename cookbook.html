@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookbook - Asher Sprigler</title>
+    <style>
+        /* Add your existing styles here */
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #444;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        /* Additional styles for the cookbook page */
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .recipe-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .recipe-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover; /* Keep aspect ratio */
+        }
+
+        .recipe-content {
+            padding: 15px;
+        }
+
+        .recipe-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .recipe-description {
+            font-size: 0.9em;
+            line-height: 1.4;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <!-- Navbar links -->
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="extracurriculars.html">Extracurriculars</a>
+        <a href="contact.html">Contact</a>
+        <!-- Social Media Links Here -->
+    </div>
+
+    <div class="page-header">
+        <h1>Cookbook</h1>
+        <p>Welcome to my collection of favorite recipes. Bon appétit!</p>
+    </div>
+
+    <div class="recipe-grid">
+        <!-- Recipe 1 -->
+        <div class="recipe-card">
+            <img class="recipe-image" src="recipe1.jpg" alt="Delicious Recipe 1">
+            <div class="recipe-content">
+                <h3 class="recipe-title">Recipe Title 1</h3>
+                <p class="recipe-description">
+                    A short description of Recipe 1, the ingredients, and why it's special.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Repeat for as many recipes as you have -->
+        
+        <!-- Recipe 2 -->
+        <div class="recipe-card">
+            <img class="recipe-image" src="recipe2.jpg" alt="Delicious Recipe 2">
+            <div class="recipe-content">
+                <h3 class="recipe-title">Recipe Title 2</h3>
+                <p class="recipe-description">
+                    A short description of Recipe 2, the ingredients, and its unique taste.
+                </p>
+            </div>
+        </div>
+
+        <!-- Add more recipes as needed -->
+
+    </div>
+
+    <!-- Footer or additional content -->
+
+</body>
+</html>
