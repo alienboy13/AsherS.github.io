@@ -34,10 +34,8 @@
             
             .banner {
                 display: flex;
-                flex-direction: row; /* Align children horizontally */
-                align-items: center; /* Center items vertically */
-                justify-content: space-around; /* Distribute space around items */
-                flex-wrap: wrap; /* Allow items to wrap as needed */
+                flex-direction: column; /* Stack children vertically */
+                align-items: center; /* Center items horizontally */
                 padding: 20px;
                 background-color: #f0f0f0;
             }
@@ -62,11 +60,30 @@
                 height: auto; /* Maintain aspect ratio */
             }
 
+            /* Constraints for the main content area */
             .about-content {
-                flex: 0 1 800px; /* Don't grow, can shrink, starting at 800px width */
-                margin: 20px auto; /* Center the about-content horizontally */
-                padding: 20px;
+                flex: 0 1 800px; /* The content will not grow, can shrink, and starts at 800px width */
+                margin: 20px; /* Adds margin around the content */
+                padding: 20px; /* Padding inside the content area */
                 text-align: justify;
+                background-color: #ffffff; /* Optional: sets the content background to white */
+            }
+
+                        /* Flexbox layout for the content area with sidebars */
+            .content-area {
+                display: flex; /* Establishes a flex container */
+                justify-content: center; /* Centers the content box horizontally */
+                padding: 20px;
+            }
+
+            /* Style for the sidebars/spacer boxes */
+            .sidebar {
+                flex: 1; /* The sidebars will grow and take available space */
+                /* Set a minimum width for the sidebars */
+                min-width: 100px; /* Adjust as needed */
+                padding: 10px; /* Adjust padding to your preference */
+                /* You can set a background color for the sidebars if you want to see them */
+                background-color: #f4f4f4; /* This is just for visualization */
             }
 
             .sidebar-left,
