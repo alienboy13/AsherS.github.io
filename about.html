@@ -5,32 +5,44 @@
         <style>
             /* ... other styles ... */
     
-            .content-area {
-                display: flex; /* Establishes a flex container */
-                justify-content: center; /* Centers the content box horizontally */
+            .banner {
+                display: flex;
+                flex-direction: row; /* Align children horizontally */
+                align-items: center; /* Center items vertically */
+                justify-content: space-around; /* Distribute space around items */
+                flex-wrap: wrap; /* Allow items to wrap as needed */
                 padding: 20px;
+                background-color: #f0f0f0;
             }
-    
-            .sidebar {
-                flex: 1; /* Allows the sidebars to grow and take up extra space */
-                /* Optionally, set a max-width if you want to limit how wide the sidebars can be */
+
+            .banner h1 {
+                flex: 1 100%; /* h1 will take full width */
+                text-align: center;
+                font-size: 2.5em;
+                margin-bottom: 20px; /* Add some space below the title */
             }
-    
+
+            .photo-grid {
+                display: flex;
+                flex: 3; /* Adjust this as necessary to control the size of the image area */
+                justify-content: center; /* Center grid items horizontally */
+                flex-wrap: wrap; /* Allow grid items to wrap */
+            }
+
+            .photo-grid img {
+                width: calc(33.333% - 20px); /* Adjust width for 3 images per row, subtracting any margin/gap */
+                margin: 10px; /* This creates a gap between images */
+                height: auto; /* Maintain aspect ratio */
+            }
+
             .about-content {
-                flex: 0 1 800px; /* This means the content will not grow, can shrink, and starts at 800px */
+                flex: 0 1 800px; /* Don't grow, can shrink, starting at 800px width */
+                margin: 20px auto; /* Center the about-content horizontally */
                 padding: 20px;
                 text-align: justify;
-                margin: 0 20px; /* This adds some space between the content and sidebars */
             }
-    
-            /* Add styling for the sidebars if needed */
-            .sidebar-left,
-            .sidebar-right {
-                /* For demonstration, adding a background color to visualize the sidebars */
-                background-color: #e9e9e9;
-                /* Set the height or padding if needed */
-                padding: 10px;
-            }
+
+
     
             /* ... other styles ... */
         </style>
