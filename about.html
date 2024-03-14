@@ -1,81 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Brian David Gilbert</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-around;
-            background-color: #444;
-            padding: 10px 0;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 5px 10px;
-        }
-
-        .navbar a:hover {
-            text-decoration: underline;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .social-icons img {
-            width: 24px;
-            margin-left: 10px;
-        }
-
-        .banner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
-
-        .banner h1 {
-            font-size: 2.5em;
-        }
-
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin: 20px;
-        }
-
-        .photo-grid img {
-            width: 100%;
-            height: auto;
-        }
-
-        .about-content {
-            padding: 20px;
-        }
-
-        .about-content h2 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .about-content p {
-            line-height: 1.6;
-        }
-    </style>
-</head>
+    <head>
+        <!-- ... other head elements ... -->
+        <style>
+            /* ... other styles ... */
+    
+            .content-area {
+                display: flex; /* Establishes a flex container */
+                justify-content: center; /* Centers the content box horizontally */
+                padding: 20px;
+            }
+    
+            .sidebar {
+                flex: 1; /* Allows the sidebars to grow and take up extra space */
+                /* Optionally, set a max-width if you want to limit how wide the sidebars can be */
+            }
+    
+            .about-content {
+                flex: 0 1 800px; /* This means the content will not grow, can shrink, and starts at 800px */
+                padding: 20px;
+                text-align: justify;
+                margin: 0 20px; /* This adds some space between the content and sidebars */
+            }
+    
+            /* Add styling for the sidebars if needed */
+            .sidebar-left,
+            .sidebar-right {
+                /* For demonstration, adding a background color to visualize the sidebars */
+                background-color: #e9e9e9;
+                /* Set the height or padding if needed */
+                padding: 10px;
+            }
+    
+            /* ... other styles ... */
+        </style>
+    </head>
 <body>
 
     <div class="navbar">
@@ -100,6 +59,10 @@
         <h2>I'm a real boy!</h2>
     </div>
 
+    <div class="sidebar sidebar-left">
+        <!-- Left sidebar content goes here -->
+    </div>
+
     <div class="about-content">
         <p>Hello, my name is Asher Sprigler. I’m a Computer Engineering Student 
             at the Milwaukee School of Engineering, taking minors in Math and 
@@ -120,8 +83,13 @@
 
     </div>
     
+    <div class="sidebar sidebar-right">
+        <!-- Right sidebar content goes here -->
+    </div>
+    
         <!-- Additional content can go here -->
     </div>
 
 </body>
 </html>
+
