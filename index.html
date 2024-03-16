@@ -104,10 +104,12 @@
 
 
         .title-image {
-            width: 100%;
-            height: auto; /* Keep original image aspect ratio */
-            object-fit: cover; /* Cover the containing area */
-            justify-content: center;
+            max-width: 300px; /* Image will be up to 300px wide but can be smaller */
+            width: 100%; /* Keeps the image responsive */
+            height: auto;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
         }
 
         .welcome-text {
