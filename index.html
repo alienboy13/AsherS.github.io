@@ -47,19 +47,61 @@
         }
 
         .content {
-            text-align: center;
-            padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
         }
 
-        /* Blob styling */
-        .blob {
-            background-color: white; /* White background for blobs */
-            border-radius: 10px; /* Rounded corners for blob */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Simple shadow for depth */
-            margin: 20px auto; /* Spacing around blobs */
-            padding: 20px;
-            max-width: 800px; /* Max width for blobs */
+        .column-left, .column-right {
+            width: 48%; /* slightly less than half the container width to account for margins */
         }
+
+        .blob {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+            padding: 20px;
+            /* You can add a min-height to make the blobs have a uniform height if desired */
+        }
+
+        .multi-column {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .update-section {
+            width: 30%;
+            padding: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            background: #f9f9f9;
+            border-radius: 5px;
+            /* Adjust the margin to control spacing between update sections */
+            margin-right: 10px;
+        }
+
+        /* Ensure last update-section does not have a margin on the right to fit properly */
+        .update-section:last-child {
+            margin-right: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .column-left, .column-right {
+                width: 100%;
+            }
+
+            .update-section {
+                width: auto;
+                margin-right: 0; /* Remove margin for mobile view */
+            }
+        }
+
 
         .title-image {
             width: 100%;
@@ -139,54 +181,60 @@
     </div>
 
     <div class="content">
-        <!-- Blob for Introduction -->
-        <div class="blob">
-            <h2>Well Hello There!</h2>
-            <img class="title-image" src="Asher_About_Center.jpg" alt="This is what I look like most of the time">
-            <p>As you might have guessed from the top of this website, my name 
-                is Asher Sprigler, and this website helps me show off the cool
-                stuff that I do. </p>
-        </div>
-
-        <!-- Blob with an image -->
-        <div class="blob">
-            <h2>Recent Work</h2>
-            <img class="title-image" src="YourImageHere.jpg" alt="A description of the image">
-            <p>Here's some of the most recent updates from my work:</p>
-        
-            <!-- Subsections for the most recent updates -->
-            <div class="multi-column">
-                <div class="update-section">
-                    <h3>Research Update</h3>
-                    <p>The latest findings from my ongoing research into [Subject/Area]. Check out the full details [link to research].</p>
-                </div>
-                <div class="update-section">
-                    <h3>Project Update</h3>
-                    <p>Just released a new version of [Project Name] with exciting features. Learn more about this personal project [link to project].</p>
-                </div>
-                <div class="update-section">
-                    <h3>Latest Recipe</h3>
-                    <p>Discover my new recipe for [Recipe Name] that's sure to tantalize your taste buds. Get the recipe [link to recipe].</p>
-                </div>
+        <!-- Two-column layout -->
+        <div class="column-left">
+            <!-- Blob for Introduction -->
+            <div class="blob">
+                <h2>Well Hello There!</h2>
+                <img class="title-image" src="Asher_About_Center.jpg" alt="This is what I look like most of the time">
+                <p>As you might have guessed from the top of this website, my name 
+                    is Asher Sprigler, and this website helps me show off the cool
+                    stuff that I do. </p>
+            </div>
+    
+            <!-- Blob for Professional Experience -->
+            <div class="blob">
+                <h2>Professional Experience</h2>
+                <p>With a background in multiple disciplines, my professional experience spans across various fields. Here's a glimpse into my career highlights.</p>
+            </div>
+            
+            <!-- Blob for Personal Interests -->
+            <div class="blob">
+                <h2>Personal Interests</h2>
+                <p>When I'm not immersed in research and teaching, I engage in a variety of personal interests that enrich my life. Discover what I love to do in my free time!</p>
             </div>
         </div>
         
-
-        <!-- Blob for Professional Experience -->
-        <div class="blob">
-            <h2>Professional Experience</h2>
-            <p>With a background in multiple disciplines, my professional experience spans across various fields. Here's a glimpse into my career highlights.</p>
+        <div class="column-right">
+            <!-- Blob with an image -->
+            <div class="blob">
+                <h2>Recent Work</h2>
+                <img class="title-image" src="YourImageHere.jpg" alt="A description of the image">
+                <p>Here's some of the most recent updates from my work:</p>
+    
+                <!-- Subsections for the most recent updates -->
+                <div class="multi-column">
+                    <div class="update-section">
+                        <h3>Research Update</h3>
+                        <p>The latest findings from my ongoing research into [Subject/Area]. Check out the full details [link to research].</p>
+                    </div>
+                    <div class="update-section">
+                        <h3>Project Update</h3>
+                        <p>Just released a new version of [Project Name] with exciting features. Learn more about this personal project [link to project].</p>
+                    </div>
+                    <div class="update-section">
+                        <h3>Latest Recipe</h3>
+                        <p>Discover my new recipe for [Recipe Name] that's sure to tantalize your taste buds. Get the recipe [link to recipe].</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Blob for Contact Information -->
+            <div class="blob">
+                <h2>Contact Me</h2>
+                <p>If you're interested in learning more or wish to discuss potential collaborations, don't hesitate to reach out.</p>
+            </div>
         </div>
-
-        <!-- Blob for Personal Interests -->
-        <div class="blob">
-            <h2>Personal Interests</h2>
-            <p>When I'm not immersed in research and teaching, I engage in a variety of personal interests that enrich my life. Discover what I love to do in my free time!</p>
-        </div>
-
-        <!-- Blob for Contact Information -->
-        <div class="blob">
-            <h2>Contact Me</h2>
-            <p>If you're interested in learning more or wish to discuss potential collaborations, don't hesitate to reach out.</p>
-        </div>
+    </div>
+    
    
