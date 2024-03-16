@@ -9,6 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            background: #f0f0f0; /* Light background for the page */
         }
 
         .header {
@@ -50,15 +51,20 @@
             padding: 50px 20px;
         }
 
-        .multi-column {
-            column-count: 3;
-            column-gap: 20px;
+        /* Blob styling */
+        .blob {
+            background-color: white; /* White background for blobs */
+            border-radius: 10px; /* Rounded corners for blob */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Simple shadow for depth */
+            margin: 20px auto; /* Spacing around blobs */
+            padding: 20px;
+            max-width: 800px; /* Max width for blobs */
         }
 
         .title-image {
             width: 100%;
-            height: 300px;
-            object-fit: cover; /* Keep aspect ratio */
+            height: auto; /* Keep original image aspect ratio */
+            object-fit: cover; /* Cover the containing area */
         }
 
         .welcome-text {
@@ -66,55 +72,120 @@
             margin-bottom: 20px;
         }
 
-        /* Simple gradient background */
-        .gradient-background {
-            background: radial-gradient(circle at center, #0062be, #00c6ff);
-            color: white;
-            padding: 100px 20px;
-            justify-content: center; /* Center grid items horizontally */
-            margin-top: 20px;
+        .multi-column {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px; /* Spacing above the multi-column layout */
         }
+
+        .update-section {
+            width: 30%; /* Each section takes up roughly a third of the blob's width */
+            padding: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Soft shadow for depth */
+            background: #f9f9f9; /* Slightly different background for contrast */
+            border-radius: 5px; /* Rounded corners for aesthetics */
+        }
+
+        .update-section h3 {
+            margin-top: 0; /* Remove top margin for headings */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .multi-column {
+                flex-direction: column;
+            }
+
+            .update-section {
+                width: auto; /* Full width on smaller screens */
+                margin-bottom: 10px; /* Space between sections when stacked */
+            }
+        }
+
+
+
+
+
+
+
+
+        
     </style>
 </head>
 <body>
     <div class="header">
-        <!-- The name would go here -->
         <h1>Asher Sprigler</h1>
     </div>
     
     <div class="nav-bar">
+        <!-- Navigation links -->
         <div>
-            <!-- Navigation links -->
             <a href="about.html">About</a>
             <a href="academia.html">Academia</a>
             <a href="projects.html">Projects</a>
-
             <a href="cookbook.html">Cookbook</a>
             <a href="contact.html">Contact</a>
         </div>
         <div class="social-icons">
-            <!-- Social icons can be added here -->
-            <a href="https://www.linkedin.com/in/asher-sprigler/"><img src="LinkedInIcon.png" alt="YouTube"></a>
+            <!-- Social icons -->
+            <a href="https://www.linkedin.com/in/asher-sprigler/"><img src="LinkedInIcon.png" alt="LinkedIn"></a>
         </div>
+    </div>
+
+    <div class="title-image">
+        <img src="Website_under_construction.png" alt="We're on our way I guess">
+
     </div>
 
     <div class="content">
-        <div class="multi-column">
-            <!-- The multiple images would go here -->
-            <!-- In a real scenario, you'd have multiple <img> tags here -->
-            <div>Oh boy it's a template</div>
-            <img class="title-image" src="Website_under_construction.png" alt="Image description">
-            <div>graphic design is my passion</div>
+        <!-- Blob for Introduction -->
+        <div class="blob">
+            <h2>Well Hello There!</h2>
+            <img class="title-image" src="Asher_About_Center.jpg" alt="This is what I look like most of the time">
+            <p>As you might have guessed from the top of this website, my name 
+                is Asher Sprigler, and this website helps me show off the cool
+                stuff that I do. </p>
         </div>
-        <div class="welcome-text">
-            <!-- The welcome message -->
-            <p>hello and welcome to my website</p>
-            <p>I haven't advertised this exists so I either gave you a link or 
-                you just saw this on my Github. Either way, welcome!
-            </p>
-            <p>please feel free to click on some things</p>
-        </div>
-    </div>
 
-</body>
-</html>
+        <!-- Blob with an image -->
+        <div class="blob">
+            <h2>Recent Work</h2>
+            <img class="title-image" src="YourImageHere.jpg" alt="A description of the image">
+            <p>Here's some of the most recent updates from my work:</p>
+        
+            <!-- Subsections for the most recent updates -->
+            <div class="multi-column">
+                <div class="update-section">
+                    <h3>Research Update</h3>
+                    <p>The latest findings from my ongoing research into [Subject/Area]. Check out the full details [link to research].</p>
+                </div>
+                <div class="update-section">
+                    <h3>Project Update</h3>
+                    <p>Just released a new version of [Project Name] with exciting features. Learn more about this personal project [link to project].</p>
+                </div>
+                <div class="update-section">
+                    <h3>Latest Recipe</h3>
+                    <p>Discover my new recipe for [Recipe Name] that's sure to tantalize your taste buds. Get the recipe [link to recipe].</p>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Blob for Professional Experience -->
+        <div class="blob">
+            <h2>Professional Experience</h2>
+            <p>With a background in multiple disciplines, my professional experience spans across various fields. Here's a glimpse into my career highlights.</p>
+        </div>
+
+        <!-- Blob for Personal Interests -->
+        <div class="blob">
+            <h2>Personal Interests</h2>
+            <p>When I'm not immersed in research and teaching, I engage in a variety of personal interests that enrich my life. Discover what I love to do in my free time!</p>
+        </div>
+
+        <!-- Blob for Contact Information -->
+        <div class="blob">
+            <h2>Contact Me</h2>
+            <p>If you're interested in learning more or wish to discuss potential collaborations, don't hesitate to reach out.</p>
+        </div>
+   
