@@ -10,9 +10,22 @@
             padding: 0;
             font-family: Arial, sans-serif;
         }
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #444;
+            padding: 10px 10px;
+        }
 
-        .navbar {
-            /* Your existing navbar styles */
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .nav-bar a:hover {
+            text-decoration: underline;
         }
 
         .project-header {
@@ -61,13 +74,45 @@
         .read-more:hover {
             background-color: #2874a6;
         }
+
+        .back-button-container {
+            margin-top: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #f2f2f2;
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #dcdcdc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .back-button:hover {
+            background-color: #e2e2e2;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <!-- Navbar content -->
+    <div class="nav-bar">
+        <!-- Navigation links -->
+        <div>
+            <a href="about.html">About</a>
+            <a href="academia.html">Academia</a>
+            <a href="projects.html">Projects</a>
+            <a href="cookbook.html">Cookbook</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="social-icons">
+            <!-- Social icons -->
+            <a href="https://www.linkedin.com/in/asher-sprigler/"><img src="LinkedInIcon.png" alt="LinkedIn"></a>
+        </div>
     </div>
+    
 
     <div class="project-header">
         <h1>Project: Personal Website</h1>
@@ -97,7 +142,7 @@
 
     <div class="blog-post">
         <h2 class="blog-post-title">Most Recent Blog Post</h2>
-        <p>This is a preview of the most recent blog post related to the project. It should be enough to give an idea of the content, but not too long that it takes over the project page.</p>
+        <p>Blog posts will exist once I have Jekyll working</p>
         <a href="blog-post.html" class="read-more">Read More</a>
     </div>
 
